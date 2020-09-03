@@ -1,0 +1,1 @@
+Admin.PlaceController = Admin.PageController.extend({})

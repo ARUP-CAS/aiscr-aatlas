@@ -1,0 +1,16 @@
+header
+  nav.navbar.navbar-default.reset-indent-bottom
+    .inner.header-row
+      a.header-logo href="/#{I18n.locale}"
+        - if I18n.locale == :cs
+          = image_tag 'LOGO_ARCHEOLOGICKY_ATLAS.svg', class: 'header-logo-cs'
+        - else
+          = image_tag 'LOGO_ARCHEOLOGICAL ATLAS.svg', class: 'header-logo-en'
+
+      .header-claim.small= t("titles.subtitle")
+
+      a.header-aiscr-logo href="http://www.aiscr.cz/"
+        - if I18n.locale == :cs
+          = image_tag 'logos/logo_AISCR_cz.png', class: 'header-aiscr-logo-img'
+        - else
+          = image_tag 'logos/logo_AISCR_en.png', class: 'header-aiscr-logo-img'

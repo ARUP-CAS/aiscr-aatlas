@@ -1,0 +1,5 @@
+each child in arrangedContent itemController='tree_node'
+  render 'tree-node' child
+
+  unless child.isClosed
+    render 'children' child.children

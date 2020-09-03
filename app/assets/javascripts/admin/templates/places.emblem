@@ -1,0 +1,12 @@
+.col-md-3.overflow-scroll-left
+  ul.nav.nav-pills.nav-stacked
+    each place in this itemController='page'
+      = link-li
+        = link-to 'place.media' place
+          if place.title
+            = place.title
+          else
+            = place.titlePlaceholder
+
+.col-md-9.overflow-scroll-right
+  = outlet

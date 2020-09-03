@@ -1,0 +1,10 @@
+ul.nav.nav-tabs
+  link-li
+    link-to view.mediaRoute this
+      ' Media
+  link-li
+    link-to view.textRoute this
+      ' Text
+
+  unless isNew
+    = partial 'partials/upload_buttons'

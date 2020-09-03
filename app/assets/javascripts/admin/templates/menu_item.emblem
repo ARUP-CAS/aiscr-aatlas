@@ -1,0 +1,20 @@
+h2 = tree-node-title this title
+
+form submit="save" class="form"
+  view 'form-group' attr="titleEn"
+    label.control-label Title en
+    = input value=titleEn class="form-control" autofocus="true"
+
+  view 'form-group' attr="titleCs"
+    label.control-label Title cs
+    = input value=titleCs class="form-control"
+
+
+  unless isNew
+    .button-group
+      button.btn.btn-danger{action "remove"} type="button" Delete
+
+  .button-group.pull-right
+    button.btn.btn-primary type="submit" Save
+    button.btn.btn-default{action "rollback"} type="button" Cancel
+

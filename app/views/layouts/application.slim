@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    title = (@title || '') + "#{' | ' unless @title.blank?}#{ t("titles.application") }"
+
+    meta name="description" content="#{ truncate( strip_tags( markdown(@description) ), length: 200 ) }"
+    meta name="robots" content="index, follow"
+
+    meta[name="og:title" content=@title]
+    meta[name="og:image" content=(@fb_image)]
+    meta[name="og:description" content=truncate( strip_tags( markdown(@description) ), length: 100 ) ]
+
+    /! shortcut/mobile "save to home screen" icons
+    link href=image_path("apple-touch-icon-57x57.png") rel="apple-touch-icon-precomposed" sizes="57x57" /
+    link href=image_path("apple-touch-icon-72x72.png") rel="apple-touch-icon-precomposed" sizes="72x72" /
+    link href=image_path("apple-touch-icon-76x76.png") rel="apple-touch-icon-precomposed" sizes="76x76" /
+    link href=image_path("apple-touch-icon-114x114.png") rel="apple-touch-icon-precomposed" sizes="114x114" /
+    link href=image_path("apple-touch-icon-120x120.png") rel="apple-touch-icon-precomposed" sizes="120x120" /
+    link href=image_path("apple-touch-icon-144x144.png") rel="apple-touch-icon-precomposed" sizes="144x144" /
+    link href=image_path("apple-touch-icon-152x152.png") rel="apple-touch-icon-precomposed" sizes="152x152" /
+
+
+    link rel="shortcut icon" href=image_path("favicon.ico") /
+    link rel="shortcut icon" href=image_path("apple-touch-icon.png") /
+
+
+    script src="//use.typekit.net/csu2rbh.js"
+    javascript:
+      try{Typekit.load();}catch(e){}
+
+    = render partial: 'partials/ga'
+
+    javascript:
+      icons = {
+        "small": {
+          icon: "#{image_path('markers/pin.misto.png')}"
+        },
+        "default": {
+          icon: "#{image_path('markers/pin.main.maly-pruhledny.png')}"
+        },
+        "large": {
+          icon: "#{image_path('markers/pin.main.current.png')}"
+        },
+
+      };
+    == stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
+    == javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkilBxACJjw1uXOQqwL5fbKVmX1ytfzb0&v=3.exp"
+    == javascript_include_tag 'application', 'data-turbolinks-track' => true
+    == csrf_meta_tags
+
+
+
+  body.svg
+    #wrapper
+      // Content
+      .main-section#section-content
+        .content
+          / header
+          #header-wrapper
+            = render partial: 'partials/header'
+            = render partial: 'partials/nav'
+
+          .clearfix.content-fill
+            = yield
+
+          = render partial: 'partials/footer'
+
+      // Map
+      section.main-section#section-map
+        #toggle-map-wrapper
+          a#toggle-map.center-both href="javascript:void(0);" data-toggle-map=true
+            .ico-close-content
+          a#toggle-map-mobile.center-both href="javascript:void(0);" data-toggle-map=true
+            .ico-close-content
+        #shadow
+        #map data-more=I18n.t('more_site') data-url="/#{I18n.locale }/lokace/markers.json"
+      = render partial: 'partials/photoswipe'

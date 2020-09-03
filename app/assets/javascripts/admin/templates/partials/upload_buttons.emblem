@@ -1,0 +1,5 @@
+li.pull-right
+  .btn.btn-success.btn-file
+    ' {{fa 'plus'}} Upload Media
+    video-upload progressed="setProgress" uploaded="uploadFinished"
+

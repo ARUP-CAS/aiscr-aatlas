@@ -1,0 +1,17 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('search.breadcrumb')
+
+  h1 = I18n.t('search.title')
+  p.indent-top
+    = I18n.t("search.query")
+    ' :
+    = @query
+
+
+  #places.spinner-placeholder
+    = render partial: "places/places"
+
+  .clearfix.indent-top-thin

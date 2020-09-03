@@ -1,0 +1,50 @@
+.filter
+  display: flex
+  border-top: 1px solid $green-light
+  border-bottom: 1px solid $green-light
+  padding: 9px 0
+
+  ~ .filter
+    border-top: 0
+
+.filter-meta
+  font-size: $font-size-small
+  line-height: 27px
+  color: #cacaca
+  margin-right: 10px
+  flex: 0 0 auto
+
+.filter-items
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: -3px
+
+.filter-item
+  display: flex
+  align-items: center
+  font-size: $font-size-small
+  line-height: 27px
+  padding: 0 10px
+  margin-right: 3px
+  margin-bottom: 3px
+
+  &, &:hover, &:active, &:focus
+    text-decoration: none
+
+  &.active
+    color: #a6b3af
+    background: $green-light
+
+    &:after
+      @extend .ico-close
+      content: ''
+      display: inline-block
+      margin-left: 15px
+
++mq-xs
+  .filter
+    flex-direction: column
+
+  .filter-items
+    margin-left: -10px
+    margin-right: -10px

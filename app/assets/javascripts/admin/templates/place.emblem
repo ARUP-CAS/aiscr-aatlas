@@ -1,0 +1,56 @@
+.row
+  .col-md-12
+    form submit="save" class="form"
+      view 'form-group' attr="title"
+        .input-group
+          = input value=title class="form-control input-lg" placeholder=titlePlaceholder name='project[title]'
+
+      .row
+        .col-md-6
+          view 'form-group' attr="subtitle"
+              label.control-label Subtitle
+              = input value=subtitle class="form-control" placeholder=subtitlePlaceholder
+        .col-md-3
+          view 'form-group' attr="slug"
+              label.control-label Slug
+              = input value=slug class="form-control"
+        .col-md-3
+          view 'form-group' attr="qrId"
+              label.control-label QR ID
+              = input value=qrId class="form-control"
+
+      .row
+        .col-md-6
+          view 'form-group' attr="address"
+            label.control-label Poloha
+            = input value=address class="form-control" placeholder=addressPlaceholder
+        .col-md-6
+           view 'form-group' attr="geoCoordinates"
+             label.control-label Souřadnice
+             = input valueBinding='geoCoordinates' class="form-control"
+
+      .row
+        .col-md-6
+          view 'form-group' attr="era"
+            label.control-label Období
+            = input value=era class="form-control" placeholder=eraPlaceholder
+
+      .row
+        .col-md-6
+          .form-group
+            label.control-label Tags
+            view 'collection-picker'  targetBinding='tags' contentBinding='controllers.tagsSelect.arrangedContent'  prompt='Add tag...' class="form-control"
+
+        .col-md-6
+          view 'labels-list' contentBinding='tags'
+
+
+      view 'page_tabs' route='place' hideLinksTabs=true
+
+      .tabpanel
+        = partial 'partials/upload_progress'
+        = outlet
+
+      = partial 'partials/save_buttons'
+
+/  .col-md-4

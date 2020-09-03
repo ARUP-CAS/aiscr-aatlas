@@ -1,0 +1,5 @@
+span.label.label-default
+  ' {{view.content.name}}
+  if view.parentView.editable
+    a{action 'remove' view.content target=view.parentView} href="#"
+      = fa 'times'

@@ -1,0 +1,41 @@
+nav.navbar.navbar-default.navbar-fixed-top role="navigation"
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link-to 'application' class='navbar-brand'
+       ' Archatlas
+
+    #navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar
+        link-li
+          a href="/admin#/places" Místa
+        link-li
+          a href="/admin#/tags" Tagy
+        li
+          form.navbar-form
+            = view 'select' contentBinding='localeOptions' valueBinding='contentLocale' class="form-control" optionValuePath="content.code" optionLabelPath="content.label"
+            '
+            .btn-group
+              button.btn.btn-success.dropdown-toggle data-toggle="dropdown"
+                ' {{fa 'plus'}} Vytvořít
+                span.caret
+              ul.dropdown-menu
+                link-li
+                  a href="/admin#/places/new"
+                    ' Nové místo
+                link-li
+                  a href="/admin#/tags/new"
+                    ' Nový tag
+
+      ul.nav.navbar-nav.navbar.navbar-right
+        link-li
+          a href="/" Web
+        li
+          a href='/admin/users' Uživatelé
+        li
+          a href='/users/sign_out' Odhlásit

@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: archatlas_development
+
+test:
+  <<: *default
+  database: archatlas_test
+
+staging:
+  <<: *default
+  database: archatlas_staging
+
+
+production:
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  adapter: postgresql
+  host: db.apple.sinfin.io
+  database: archatlas_production
+  encoding: utf8
+  collation: cs_CZ.UTF8 
+  min_messages: warning
+  pool: 20
+  timeout: 3000
+
+

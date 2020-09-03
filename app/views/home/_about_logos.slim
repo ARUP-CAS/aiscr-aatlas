@@ -1,0 +1,35 @@
+.about-logos
+  - if I18n.locale == :cs
+    = image_tag("logos/eu_CZ.jpg", class: 'about-logo-bigger')
+  - else
+    = image_tag("logos/eu_EN.jpg", class: 'about-logo-bigger')
+
+  a target="_blank" href="http://www.msmt.cz/" title="Ministerstvo školství, mládeže a tělovýchovy"
+    - if I18n.locale == :cs
+      = image_tag("logos/MSMT_logotyp_text_RGB_cz.jpg")
+    - else
+      = image_tag("logos/MSMT_logotyp_text_RGB_eng.jpg")
+
+  a target="_blank" href="http://www.mkcr.cz/" title="Ministerstvo kultury České republiky"
+    = image_tag('logos/ministerstvo-kultury.gif')
+
+  a target="_blank" href="http://www.aiscr.cz/" title="Archeologický informační systém ČR"
+    = img_tag_retina_static('logo_1_AIS_CR.png')
+
+  a target="_blank" href="http://www.arup.cas.cz/" title="Archeologická mapa České republiky"
+    = image_tag("logos/archeologicka-mapa.gif")
+
+  a target="_blank" href="http://av21.avcr.cz/" title="Akademie věd ČR – Strategie AV21"
+    = img_tag_retina_static('logo_8_StrategieAV21.png')
+
+  a target="_blank" href="http://www.arup.cas.cz/" title="Archeologický ústav AVČR"
+    = image_tag('logos/ARU_Praha.png')
+
+  a target="_blank" href="http://arub.avcr.cz" title="Archeologický ústav AV ČR, Brno, v. v. i."
+    = image_tag('logos/arub.png')
+
+  a target="_blank" href="https://www.npu.cz" title="Národní památkový ústav"
+    = image_tag('logos/NPU-horizontal-RGB.png')
+
+  a target="_blank" href="http://www.academia.cz/" title="Nakladatelství Academia"
+    = image_tag('logos/academia.gif')

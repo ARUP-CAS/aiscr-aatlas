@@ -1,0 +1,3 @@
+container = $("#places");
+
+container.html("<%= escape_javascript(render(partial: 'places/places', layout: false, locals: { places: @places } )) %>")

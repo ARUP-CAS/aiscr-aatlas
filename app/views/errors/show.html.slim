@@ -1,0 +1,27 @@
+/ .inner
+/   .clearfix
+/     h1= @title
+/
+/     p= @line1
+/     p= @line2
+/
+/     a.btn.btn-lg.btn-primary.no-hover href="/" style="margin-top:-5px;margin-right:1px;"
+/       .ico.ico-inline.ico-arrow-left-white
+/       = I18n.t("meta.back_to_home")
+      
+      
+
+.inner.flex
+  .center-both.flex-vertical data-fill-window-height=true
+    .relative
+      h1.upper=@title
+      .clearfix.indent-top-half
+        p
+          = @line1
+          br
+          = @line2
+        a.btn.btn-primary.indent-top href="/"
+          = I18n.t("meta.back_to_home")
+  .indent-top
+
+        

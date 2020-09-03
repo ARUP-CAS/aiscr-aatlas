@@ -1,0 +1,117 @@
+cs:
+  more: Více
+  prev: předchozí
+  next: další
+  more_site: Více o lokalitě
+  show_on_map: Zobrazit na mapě
+  download_pdf: Stáhnout v PDF
+
+  date:
+    formats:
+      default:
+        "%m/%d/%Y"
+      with_weekday:
+        "%a %m/%d/%y"
+
+  time:
+    formats:
+      default:
+        "%a, %b %-d, %Y at %r"
+      date:
+        "%b %-d, %Y"
+      short:
+        "%B %d"
+
+  titles:
+    application: Archeologický atlas Čech
+    subtitle: Vybrané památky od pravěku do 20. století
+
+  nav:
+    introduction: Úvod
+    home: Úvodní strana
+    locations: Lokality
+    sources: Zdroje
+    downloads: Ke stažení
+    about: O projektu
+    switch_lang:
+      title: English
+
+  home:
+    perex_big: Vítejte na stránkách Archeologického atlasu ČR! Jejich cílem je představit Vám nejzajímavější archeologické památky na našem území a umožnit Vám je navštívit.
+    perex_small: |
+      Stránky vycházejí ze dvou vydaných %{books_link} a dalších %{others_link} a v některých ohledech je dále rozšiřují. Na stránkách Archeologického atlasu ČR najdete stručný popis archeologických lokalit, jejich geografické souřadnice, galerii fotografií, mapy a plány ke stažení a výběr odborných i populárních článků ve fulltextové podobě.
+
+      K dnešnímu dni je v Archeologickém atlasu ČR zpracováno %{count} lokalit.
+    books: knih
+    others: zdrojů
+    more_info: Více o zdrojích informací
+    where_buy: Kde koupit knihy?
+    show_all_localites: Zobrazit všechny lokality
+
+  location:
+    perex: Lokality k prohlédnutí si můžete vybrat z níže uvedeného seznamu. Při výběru lze použít vyhledávací okénko, filtr podle typu lokality a/nebo archeologického období, případně mapu. Najdete zde stručný popis lokality, její základní plán(y) a výběr fotografií, který bude podle možností rozšiřován. Podrobnější údaje jsou obsaženy v našich %{sources_link}, případně v odborné literatuře, jejíž seznam je k dispozici v oddíle %{downloads_link}. V seznamu najdete úplné bibliografické údaje; plné texty vybraných titulů jsou postupně přidávány do sekce %{publications_link}.
+    description_gallery: Popis a galerie
+    map_plans: Plány a mapy
+    sources_link: tištěných knihách
+    downloads_link: Ke stažení
+    publications_link: Lokality – Publikace
+    literature:
+      title: Publikace
+      perex: Texty vybraných článků a zpráv k dalšímu studiu. Úplné citace jsou obsaženy na kartě <a href="%{url}">Ke stažení</a> v souboru Seznam literatury.
+    nav_point: Navigační bod
+    filter_by_locality: "Filtrovat podle typu lokality:"
+    filter_by_era: "Filtrovat podle stáří lokality:"
+    legend: "Vysvětlivky k mapám:"
+    symbols: "Mapové značky viz sekci [Ke stažení.](/ke-stazeni)"
+  downloads:
+    perex: Mapy a plány jednotlivých míst jsou k dispozici v záložkách příslušných lokalit. V této sekci nabízíme několik souborů se souhrnnými daty, která lze využít při práci s webovými stránkami, orientaci v mapách a navigaci v terénu pomocí GPS.
+
+  admin:
+    user:
+      sign_in_count: Počet přihlášení
+      last_sign_in_at: Poslední přihlášení
+
+  meta:
+    back_to_home: Zpět na home
+    error_404:
+      title: 404 error
+      text_line_1: Stránka kterou hledáte neexistuje.
+      text_line_2: Buďto máte špatný odkaz, nebo byla přesunuta.
+    error_422:
+      title: 422 error
+      text_line_1: Změna nebyla povolena.
+      text_line_2: Možná chcete udělat něco, co nemáte dovoleno.
+    error_500:
+      title: 500 error
+      text_line_1: Omlouváme se, ale něco se rozbilo.
+      text_line_2: Zkuste přejít na homepage, nebo se vraťte později.
+
+  search:
+    title: Výsledky vyhledávání v lokalitách
+    query: Hledaný výraz
+    breadcrumb: Vyhledávání
+    inlocations: Hledat v lokalitách
+    sorry: Je nám líto
+    no_results: Nenalezeny žádné výsledky
+
+  # Kaminari
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "předchozí"
+      next: "další"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+
+  place_printer:
+    title: 'Archeologický atlas ČR – výpis lokality'
+    page_numbers: 'stránka <page> z <total>'

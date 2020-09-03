@@ -1,0 +1,33 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('nav.sources')
+
+  .rich-text
+    h1 Zdroje
+
+    figure
+      .figure-images
+        = img_tag_retina_static('book_cover_AAC.jpg')
+
+      figcaption
+        h2 Kuna, M. a kolektiv, <b>Archeologický atlas Čech. Vybrané památky od pravěku do 20. století</b>. Praha: Archeologický ústav AV ČR – Academia. 2014 (1. vydání), 2015 (2. vydání). 517 str. ISBN 978-80-87365-78-6 (ARÚP), 978-80-200-2485-5 (Academia).
+        p Kniha obsahuje (i) strukturovaný popis 105 archeologických lokalit na území Čech, přístupové mapy a plány lokalit, fotografie, souřadnice navigačních bodů pro přístroje GPS a QR kódy s odkazy na informace na těchto stránkách; (ii) úvod a textové boxy, ve kterých jsou přístupným způsobem rozvedeny názory a metody současné archeologie a (iii) vysvětlivky použitých odborných pojmů, rejstřík katastrů a jmen lokalit a seznam použité literatury (#{link_to 'ukázka', '/downloads/ukazka_AAC.pdf', target: '_blank'}).  Knihu lze zakoupit v #{link_to 'Knihkupectvích Academia', 'http://www.academia.cz/eshop'}.
+
+    figure
+      .figure-images
+        = img_tag_retina_static('book_cover_MS.jpg')
+
+      figcaption
+        h2 Tomášek, M. a kolektiv, <b>100 zajímavých archeologických lokalit Moravy a Slezska</b>. Praha - Brno: Národní památkový ústav. 2015. ISBN  978-80-7480-054-2.
+        p Soubor sta moravských a slezských archeologických lokalit zpracovaný podobným způsobem jako Archeologický atlas Čech (#{link_to 'ukázka', '/downloads/ukazka_MS.pdf', target: '_blank'}).  Knihu lze zakoupit v prodejně Národního památkového ústavu (Na Perštýně 356/12, 110 00 Praha-Staré Město) a ve vybraných památkových objektech spravovaných NPÚ. Viz #{link_to('https://www.npu.cz/100_zajimavych_archeologickych_lokalit_moravy_a_slezska', 'https://www.npu.cz/100_zajimavych_archeologickych_lokalit_moravy_a_slezska', target: '_blank', class: 'rich-text-break')}
+
+    figure
+      .figure-images
+        = img_tag_retina_static('logo_1_AIS_CR.png')
+        = img_tag_retina_static('logo_8_StrategieAV21.png')
+
+      figcaption
+        p <b>Digitální korpus českých hradišť</b> – soubor informací o pravěkých a raně středověkých hradištích postupně shromažďovaný v Archeologickém ústavu AV ČR v Praze jako součást infrastruktury Archeologický informační systém ČR. V současné době je na území Čech evidováno kolem 600 pravěkých a raně středověkých hradišť a výšinných sídlišť, z nichž část je prezentována zde. Na vytváření korpusu se podílí také #{link_to 'J. Marounek', 'http://www.stredovek.com'} (NPÚ – střední Čechy).
+        p Vznik a rozvoj datového souboru získal podporu z výzkumného programu Paměť v digitálním věku v rámci #{link_to 'Strategie AV21 Akademie věd ČR', 'http://av21.avcr.cz/'}. Data digitálního korpusu jsou postupně zpřístupňována v aplikacích #{link_to 'Archeologická mapa ČR', 'http://www.archeologickamapa.cz/'} a #{link_to 'Digitální archiv AMČR', 'http://digiarchiv.amapa.cz/home'}, jakož i dalšími způsoby.

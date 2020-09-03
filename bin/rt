@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+# ($:).unshift 'test'
+($:).unshift '.'
+
+file = ARGV.shift
+opts = ARGV.join(' ')
+
+cmd = if opts
+       %{bin/rake test #{file} TESTOPTS="#{opts}"}
+     else
+       %{bin/rake test #{file}}
+     end
+
+puts "(from #{__FILE__}: #{cmd})"
+
+system cmd

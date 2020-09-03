@@ -1,0 +1,17 @@
+nav#main-nav.navbar.navbar-default
+  .inner
+    ul.nav.navbar-nav
+      li class="#{ 'active' if @menu == "home" }": a href="/#{I18n.locale}" = I18n.t('nav.home')
+      li class="#{ 'active' if @menu == "places" }": a href=places_path = I18n.t('nav.locations')
+      li class="#{ 'active' if @menu == "sources" }": a href=sources_path = I18n.t('nav.sources')
+      li class="#{ 'active' if @menu == "downloads" }": a href=downloads_path = I18n.t('nav.downloads')
+      li class="#{ 'active' if @menu == "about" }": a href=about_path = I18n.t('nav.about')
+
+
+    ul.nav.navbar-nav.navbar-right style="margin-right:0;"
+      li
+        form#search.relative.indent-top-half.indent-right-half action="/#{I18n.locale}/search"
+          input type="text" name="q" placeholder=I18n.t("search.inlocations") value=@query
+          button.btn.ico-search.absolute.top-right type="submit"
+      li
+        a href=lang_swith = I18n.t('nav.switch_lang.title')

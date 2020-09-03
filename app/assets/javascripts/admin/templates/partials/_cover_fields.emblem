@@ -1,0 +1,10 @@
+.row
+  .col-md-6
+    view 'form-group' attr="coverType"
+      label.control-label Cover type
+      = view "select" valueBinding='coverType' content=coverTypeList class="form-control"
+
+  .col-md-6
+    view 'form-group' attr="coverColumns"
+      label.control-label Cover columns
+      = view "select" valueBinding='coverColumns' content=coverColumnsList class="form-control"

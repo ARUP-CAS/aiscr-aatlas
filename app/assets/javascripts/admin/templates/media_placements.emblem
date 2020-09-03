@@ -1,0 +1,14 @@
+= each slice in slices
+  .row
+    = each placement in slice itemController='mediaPlacement'
+      .col-md-3.media-tile
+        view 'media_placement'
+          img src=placement.mediaItem.thumbnailUrl draggable="false"
+          / else
+          /   img src="http://placehold.it/418x418&text=Document" draggable="false"
+
+          .caption
+            remove-button remove='removeMediaPlacement' param=placement.model
+            partial 'partials/placement_editing'
+            view 'star'
+          .gap

@@ -1,0 +1,14 @@
+view 'form-group' attr="textContent"
+  label.control-label Text
+  = textarea value=textContent class="form-control" rows=5 placeholder=textContentPlaceholder
+
+view 'form-group' attr="mapTextContent"
+  label.control-label Map Text
+  = textarea value=mapTextContent class="form-control" rows=5 placeholder=mapTextContentPlaceholder
+
+view 'form-group' attr="metaTitle"
+  label.control-label Meta title
+  = input value=metaTitle class="form-control" placeholder=metaTitlePlaceholder
+view 'form-group' attr="metaDescription"
+  label.control-label Meta description
+  = input value=metaDescription class="form-control" placeholder=metaDescriptionPlaceholder

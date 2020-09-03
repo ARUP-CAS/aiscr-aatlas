@@ -1,0 +1,136 @@
+/*
+ *
+ *= require ./bootstrap_and_overrides
+ *= require font-awesome
+
+ *= require barbecue/remove-button
+
+ *= require_tree .
+ *= require_self
+ */
+
+@import "barbecue/remove-button";
+
+
+$brand-primary: #4A9368;
+$brand-success: #8F65BE;
+
+
+body {
+  margin-top: 70px;
+}
+
+.right-side-edit {
+  position: fixed;
+  right: 1em;
+}
+
+.ember-view.is-dirty {
+  background-color: #FFF9E5;
+}
+
+ul.labels-list {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 0.2em;
+    a { color: white; }
+    a:hover { color: $brand-primary; }
+  }
+}
+
+.tabpanel {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.progress {
+  margin: 1em;
+}
+
+.media-placements {
+  padding: 0 1em;
+
+  & > .row > .item { padding: 5px; }
+
+  .thumbnail {
+    position: relative;
+
+    & .star {
+      position: absolute;
+      left:10px;
+      top: 10px;
+    }
+
+    & .star {
+      &.off { display: none; }
+      &.on { display: block; }
+    }
+
+    &:hover {
+      .star { display: block; }
+
+      .caption h4 {
+        font-weight: bold;
+      }
+    }
+
+    @include has-remove-button;
+  }
+}
+
+
+.star {
+   // not used
+   // &.fa-star-o {
+   // color: gray;
+   // }
+
+   &.on { color: #FFD800; }
+   &.off { color: white; }
+
+   &.fa-star {
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: gray;
+   }
+}
+
+
+.thumbnail {
+  position: relative;
+  &:hover { border: 1px solid $brand-success; }
+  cursor: pointer;
+
+  .gap { diplay: none; }
+
+  &.dragging-over .gap {
+     display: block;
+     position: absolute;
+     top: -10px;
+     right: -15px;
+     width: 5px;
+     height: 110%;
+     background-color: $brand-success;
+   }
+}
+
+
+.overflow-scroll-left {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.overflow-scroll-right {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+}

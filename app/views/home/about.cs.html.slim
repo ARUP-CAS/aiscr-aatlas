@@ -1,0 +1,125 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('nav.about')
+
+  h1 = I18n.t('nav.about')
+  .textile.unlist.headings
+    p.large
+      ' Knihy <b>Archeologický atlas Čech</b> a <b>100 zajímavých archeologických lokalit Moravy a Slezska</b> byly vytvořeny v Archeologickém ústavu AV ČR v Praze a Národním památkovém ústavu jako vedlejší výsledky společného projektu „Archeologická mapa ČR. Systém pro sběr, správu a prezentaci dat“ (program NAKI financovaný prostřednictvím Ministerstva kultury ČR, 2012–2015).
+      ' Hlavním cílem projektu bylo vytvoření oborového informačního systému pro správu informací o připravovaných a probíhajících archeologických výzkumech, nálezech a lokalitách na území ČR (viz #{link_to 'www.archeologickamapa.cz', 'http://www.archeologickamapa.cz'}).
+
+    p
+      ' <b>Webové stránky Archeologický atlas ČR</b> vznikly v r. 2018 rozšířením původních stránek se souborem pouze českých lokalit (spuštěných v březnu 2015) o lokality na území Moravy a Slezska. Tyto webové stránky jsou jednou ze součástí výzkumné infrastruktury Archeologický informační systém ČR zapsané do Cestovní mapy ČR velkých výzkumných infrastruktur pro výzkum, experimentální vývoj a inovace.
+
+    p
+      ' Záměrem autorů a správců webových stránek Archeologický atlas ČR je postupně doplňovat údaje o zajímavých a pro veřejnost atraktivních archeologických lokalitách, a to i nad rámec obsahu dvou výše uvedených publikací.
+
+    = render partial: 'home/about_logos'
+
+    h2 Odkazy (archeologické lokality ČR)
+
+    ul
+      li Archeologická mapa ČR: #{link_to('http://www.archeologickamapa.cz/', 'http://www.archeologickamapa.cz/', target: '_blank')}
+      li Archeologický informační systém ČR: #{link_to('http://www.aiscr.cz', 'http://www.aiscr.cz', target: '_blank')}
+      li Digitální archiv AMČR: #{link_to('http://digiarchiv.amapa.cz/home', 'http://digiarchiv.amapa.cz/home', target: '_blank')}
+      li Státní archeologický seznam ČR (NPÚ): #{link_to('http://isad.npu.cz', 'http://isad.npu.cz', target: '_blank')}
+      li Cradles of European Culture: #{link_to('http://www.cradlesec.eu/cec2014/default.aspx', 'http://www.cradlesec.eu/cec2014/default.aspx', target: '_blank')}
+      li Heritage Route: #{link_to('http://www.heritage-route.eu/', 'http://www.heritage-route.eu/', target: '_blank')}
+      li Databáze fotografií hradišť a hradů J. Marounka: #{link_to('http://www.stredovek.com/', 'http://www.stredovek.com/', target: '_blank')}
+      li Vodní mlýny: #{link_to('http://vodnimlyny.cz/', 'http://vodnimlyny.cz/', target: '_blank')}
+      li
+        ' Opevnění ČSR z r. 1938:
+        ul
+          li mapa: #{link_to('http://mapa.opevneni.cz/?n=49.351265&e=17.317234&r=312aae038&z=8&m=t', 'http://mapa.opevneni.cz/?n=49.351265&e=17.317234&r=312aae038&z=8&m=t', target: '_blank')}
+          li databáze, fotografie: #{link_to('http://www.ropiky.net/', 'http://www.ropiky.net/', target: '_blank')}
+      li Zaniklé obce po r. 1945: #{link_to('http://www.zanikleobce.cz/', 'http://www.zanikleobce.cz/', target: '_blank')}
+
+    h2 Archeologický ústav AV ČR, Praha, v. v. i.
+
+    ul
+      li Mgr. Markéta Augustýnová
+      li Mgr. Ondřej Baier
+      li Eva Čepeláková
+      li Ing. Čeněk Čišecký
+      li Mgr. Lucie Čulíková, Ph.D.
+      li Mgr. Alžběta Danielisová, Ph.D.
+      li PhDr. Dagmar Dreslerová, Ph.D.
+      li prof. PhDr. Martin Gojda, CSc., DSc.
+      li PhDr. Libuše Haišmanová
+      li Mgr. Jan Hasil, Ph.D.
+      li PhDr. Josef Hložek, Ph.D.
+      li Mgr. Judita Chylíková
+      li MgA. Zuzana Kačerová
+      li Mgr. Tomáš Krofta
+      li Ing. Dana Křivánková
+      li PhDr. Martin Kuna, Ph.D., DSc. (vedoucí týmu)
+      li Mgr. Michaela Langová
+      li Mgr. Barbora Machová
+      li Mgr. Kristýna Malinková
+      li Mgr. Jan Mařík, Ph.D.
+      li Mgr. Petra Maříková Vlčková
+      li Mgr. David Novák, Ph.D.
+      li Ing. Jitka Říhová
+      li Mgr. Ondřej Švejcar, Ph.D.
+      li Mgr. Zuzana Vlčková
+
+      li
+        ' Web:
+        = link_to 'http://www.arup.cas.cz', 'http://www.arup.cas.cz'
+      li
+        ' Mail:
+        = mail_to 'aatlas@arup.cas.cz'
+
+    h2 Archeologický ústav AV ČR, Brno, v. v. i.
+
+    ul
+      li Mgr. Olga Lečbychová (vedoucí týmu)
+      li Mgr. Zdenka Kosarová
+      li Kristýna Suchánková, DiS.
+      li Bc. Petr Pajdla
+      li Mgr. Jiří Pejchal
+      li Veronika Řihánková, DiS
+      li Mgr. Irena Ženožičková
+
+      li
+        ' Web:
+        = link_to 'http://arub.avcr.cz/', 'http://arub.avcr.cz/'
+
+    h2 Národní památkový ústav
+
+    ul
+      li Mgr. Ján Čáni
+      li Mgr. Hana Dehnerová
+      li Mgr. Alena Knechtová
+      li Mgr. Petr Kos
+      li Mgr. Pavel Macků
+      li David Merta
+      li Mgr. Lenka Militká
+      li Zuzana Petříková
+      li Mgr. Pavla Popelářová
+      li PhDr. Radmila Stránská
+      li Mgr. Pavel Šlézar
+      li Mgr. Martin Tomášek, Ph.D. (vedoucí týmu)
+      li Mgr. Dagmar Vorlíčková
+      li Mgr. Michal Zezula
+      li Bc. Michaela Zezulová
+      li
+        ' Web:
+        = link_to 'https://www.npu.cz', 'https://www.npu.cz'
+
+    h2 Další spolupracovníci
+
+    ul
+      li Jiří Marounek (#{link_to 'www.stredovek.com', 'http://www.stredovek.com', target: '_blank'})
+      li Mgr. Zdeněk Mazač
+
+    h2 Webové stránky
+
+    ul
+      li © 2015-2017 M. Kuna, J. Hasil, J. Korteová, D. Křivánková, J. Říhová, M. Starcová a autoři textů. Kolegům J. Maříkové-Kubkové, K. Chlustíkové a K. Válové děkujeme za někdejší inspiraci načerpanou z jejich webu Heritage Route.
+      li © 2018 M. Kuna a kol.
+      li
+        a<> href="http://sinfin.digital" title="Sinfin.digital - návrh a implementace webových stránek" Sinfin.digital
+        ' návrh a implementace webových stránek.

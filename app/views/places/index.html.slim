@@ -1,0 +1,37 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('nav.locations')
+
+  h1 = I18n.t('nav.locations')
+  p.indent-top
+    == t('location.perex', sources_link: link_to(t('location.sources_link'), sources_path), \
+                           downloads_link: link_to(t('location.downloads_link'), downloads_path), \
+                           publications_link: link_to(t('location.publications_link'), sources_path))
+
+  div.indent-top data-url="#{url_for(places_path)}"
+    - if @tags_type.size > 0
+      .filter
+        small.filter-meta = t("location.filter_by_locality")
+
+        .filter-items
+          - @tags_type.each do |tag|
+            - tag_name = URI::encode(tag.to_s)
+            a.filter-item data-tag=tag_name href="##{tag_name}"
+              = tag.send("title_#{I18n.locale}")
+
+    - if @tags_era.size > 0
+      .filter
+        small.filter-meta = t("location.filter_by_era")
+
+        .filter-items
+          - PlacesController::ERAS.each do |era|
+            - tag_name = URI::encode(era)
+            a.filter-item data-tag=tag_name href="##{tag_name}"
+              = Tag.find_by_name(era).title
+
+  #places.spinner-placeholder
+    = render partial: "places/places"
+
+  .clearfix.indent-top-thin

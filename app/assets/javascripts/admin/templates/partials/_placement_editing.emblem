@@ -1,0 +1,29 @@
+if placement.isEditing
+  .form-group
+    p
+      ' Title 
+      = input value=placement.title class='form-control' placeholder=titlePlaceholder
+    p
+      ' Copyright CS: 
+      = input value=placement.mediaItem.copyrightCs class='form-control'
+    p
+      ' Copyright EN: 
+      = input value=placement.mediaItem.copyrightEn class='form-control'
+    p
+      a.btn.btn-danger{action 'rollbackItem'}
+        fa 'times'
+      button.btn.btn-success click='saveItem'
+        fa 'check'
+
+      if placement.mediaItem.isVideo
+        .btn.btn-default.btn-file
+          ' {{fa 'plus'}} Upload Cover
+          video-upload progressed="setProgress" uploaded="uploadFinished"
+        partial 'partials/upload_progress'
+
+
+else
+  a{action 'toggleEditing' true} role='button'
+    fa 'edit'
+    h4
+      ' {{placement.title}}

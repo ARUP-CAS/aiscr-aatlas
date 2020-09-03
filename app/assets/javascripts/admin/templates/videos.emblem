@@ -1,0 +1,18 @@
+table.table
+  thead
+    th Title
+    th URL
+    th
+  tbody
+    each video in this itemController='video'
+      tr
+        td
+          = link-to 'video' video
+            = video.title
+        td
+          a href=video.urlOriginal
+            = video.urlOriginal
+            ' {{fa 'external-link'}}
+        td
+          a.btn.btn-danger{ action 'remove' video bubbles=false }
+            fa 'trash'

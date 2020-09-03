@@ -1,0 +1,12 @@
+footer
+  .inner
+      img.inline-block src=image_path("2_AMCR_logo_cz.png")
+      img.inline-block.indent-left src=image_path("ARU-logo.png")
+
+      .pull-right.indent-top-half
+        ul.reset-ul.small
+          li.inline-block.active: a href="/" = I18n.t('nav.home')
+          li.inline-block.indent-left-half: a href=places_path = I18n.t('nav.locations')
+          li.inline-block.indent-left-half: a href=sources_path = I18n.t('nav.sources')
+          li.inline-block.indent-left-half: a href=downloads_path = I18n.t('nav.downloads')
+          li.inline-block.indent-left-half: a href=about_path = I18n.t('nav.about')

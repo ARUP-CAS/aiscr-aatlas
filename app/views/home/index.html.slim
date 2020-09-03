@@ -1,0 +1,43 @@
+.inner.content-stretch
+  .indent-top-extended
+    .text.p-has-margin
+      p.large
+        == t('home.perex_big')
+
+      = simple_format t('home.perex_small', books_link: link_to(t('home.books'), about_path), \
+                                            others_link: link_to(t('home.others'), about_path),
+                                            count: "<b>#{Place.count}</b>")
+
+      .indent-top-half
+        a href=sources_path
+          = I18n.t('home.more_info')
+          | / 
+          = I18n.t('home.where_buy')
+
+.indent-top-extended.carousel.slide data-ride="carousel" data-slideshow=true id="carousel-1"
+  .carousel-inner role="listbox"
+    - @sample_places.each_with_index do |place, i|
+      - active = ''
+      - if i == 0
+         - active = 'active'
+      .item class=active data-slide-no=i
+        - if thumbnail = place.cover_image.try(:thumb,"1200x480#")
+          img.item-img.max-width-100 src=thumbnail.url width=thumbnail.width height=thumbnail.height alt="#{place.title}, #{place.subtitle}"
+          .item-text.absolute.fill.flex.top-left.vertical-gradient
+            .flex-bottom.fill-horizontal
+              .inner.negative-block
+                .pull-left
+                  h4 = place.title
+                  p = place.subtitle
+                .pull-right
+                  a.btn.btn-white.btn-padding-lg href=place_path(place) = I18n.t('more')
+.controls.gray-wrapper data-carousel-id="carousel-1"
+  .inner
+    a href=places_path = I18n.t('home.show_all_localites')
+    .pull-right.dots
+      - @sample_places.each_with_index do |place, i|
+        - classname = 'indent-left-half'
+        - if i == 0
+          - classname = 'active'
+
+        a.inline-block class=classname href="#" data-target="#carousel-1" data-slide-to=i

@@ -1,0 +1,27 @@
+.ico-search, .ico-logo, .ico-spinner, .ico-arrow-prev-lg, .ico-slideshow, .ico-download:hover, .ico-download, .ico-arrow-next-lg, .ico-close-lg, .ico-close, .map-only .ico-close-content, .active .ico-slideshow, .ico-close-content { background: url(image_path("sprite.archatlas.png")); }
+
+.svg .ico-search, .svg .ico-logo, .svg .ico-spinner, .svg .ico-arrow-prev-lg, .svg .ico-slideshow, .svg .ico-download:hover, .svg .ico-download, .svg .ico-arrow-next-lg, .svg .ico-close-lg, .svg .ico-close, .svg .map-only .ico-close-content, .svg .active .ico-slideshow, .svg .ico-close-content { background-image: url(image_path("sprite.archatlas.svg")); }
+
+.ico-search, .ico-close { height: 16px; }
+
+.ico-download:hover, .ico-download { width: 49px; height: 58px; }
+
+.ico-arrow-prev-lg, .ico-arrow-next-lg { width: 31px; height: 58px; }
+
+.ico-slideshow, .active .ico-slideshow { width: 13px; height: 13px; }
+
+.map-only .ico-close-content, .ico-close-content { width: 15px; height: 37px; }
+
+.ico-search { background-position: -304px -48px; width: 16px; }
+.ico-logo { background-position: -43px -14px; width: 277px; height: 20px; }
+.ico-spinner { background-position: -277px -152px; width: 42px; height: 43px; }
+.ico-arrow-prev-lg { background-position: -136px -117px; }
+.ico-slideshow { background-position: -205px -151px; }
+.ico-download:hover { background-position: -253px -74px; }
+.ico-download { background-position: -202px -74px; }
+.ico-arrow-next-lg { background-position: -86px -117px; }
+.ico-close-lg { background-position: -135px -62px; width: 33px; height: 33px; }
+.ico-close { background-position: -87px -72px; width: 17px; }
+.map-only .ico-close-content { background-position: -56px -61px; }
+.active .ico-slideshow { background-position: -234px -151px; }
+.ico-close-content { background-position: -44px -117px; }

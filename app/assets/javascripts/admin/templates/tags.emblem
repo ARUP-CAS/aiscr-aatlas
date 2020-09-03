@@ -1,0 +1,18 @@
+.col-md-6
+  table.table
+    thead
+      th Jméno
+      th Typ
+    tbody
+      each tag in this
+        tr
+          td
+            = link-to 'tag' tag
+              = tag.name
+          td.featured
+            if tag.era
+              fa 'calendar' 'fa-lg calendar on'
+
+
+.col-md-6.right-side-edit
+  = outlet

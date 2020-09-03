@@ -1,0 +1,9 @@
+.col-md-3
+   view 'form-group' attr="latitude"
+     label.control-label Latitude
+     = input valueBinding='latitude' class="form-control" type='number' step='0.00000001'
+
+.col-md-3
+  view 'form-group' attr="longitude"
+    label.control-label Longitude
+    = input valueBinding='longitude' class="form-control" type='number' step='0.00000001'

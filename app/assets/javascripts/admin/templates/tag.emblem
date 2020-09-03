@@ -1,0 +1,25 @@
+h3
+  | Tag &nbsp;
+  = name
+
+form submit="save" class="form"
+  view 'form-group' attr="name"
+    label.control-label Name
+    = input value=name class="form-control"
+
+  view 'form-group' attr="title"
+    label.control-label Title
+    = input value=title class="form-control" placeholder=titlePlaceholder
+    
+  .checkbox
+    label
+      = input type='checkbox' checked=era
+      ' Období
+
+
+  .button-group
+    button.btn.btn-primary type="submit" Save
+    button.btn.btn-default{action "rollback"} type="button" Cancel
+
+  unless isNew
+    button.btn.btn-danger.pull-right{action "remove"} type="button" Delete

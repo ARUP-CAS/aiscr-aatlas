@@ -1,0 +1,117 @@
+en:
+  more: More
+  prev: previous
+  next: next
+  more_site: More about the site
+  show_on_map: Display in map
+  download_pdf: Download PDF
+
+  date:
+    formats:
+      default:
+        "%m/%d/%Y"
+      with_weekday:
+        "%a %m/%d/%y"
+
+  time:
+    formats:
+      default:
+        "%a, %b %-d, %Y at %r"
+      date:
+        "%b %-d, %Y"
+      short:
+        "%B %d"
+
+  titles:
+    application: Archaelogical Atlas Of Bohemia
+    subtitle: Selected sites from prehistory to the 20th century
+
+  nav:
+    introduction: Introduction
+    home: Home page
+    locations: Sites
+    sources: Sources
+    downloads: Downloads
+    about: About the project
+    switch_lang:
+      title: Česky
+
+  home:
+    perex_big: Welcome to the website of the Archaeological Atlas of the CR! Our aim is to present some of the most typical archaeological sites on our territory and to enable you a visit of them.
+
+    perex_small: |
+      The website is based on two published %{books_link} and other %{others_link} but in some respects, it broadens the scope of them. On this website, you will find short descriptions of the selected sites, their geographic coordinates, photo galleries, maps and plans for download and a choice of full-text articles for further reading.
+
+      By now, information on %{count} archaeological sites is available here.
+    books: books
+    others: sources
+    more_info: More on the sources of information
+    where_buy: Where to buy the books?
+    show_all_localites: Zobrazit všechny lokality
+  location:
+    perex: For a detailed study, select a site from the list below. You can also use the full-text search window or filter sites by their type and/or archaeological period. Alternatively, you can search for sites in the map. Here, you will find a short description of each site, basic maps and site plans, as well as a set of photographs, which will be upgraded in the future as far as possible.  More information can be gained from our printed %{publications_link} and from specialized literature in general, references to which are given in the chapters on individual sites. The complete list of bibliographic entries is available in the %{downloads_link} section; full-text versions of some articles appear under the %{publications_link} tab.
+    description_gallery: Abstract and gallery
+    map_plans: Maps and plans
+    sources_link: publications
+    downloads_link: Downloads
+    publications_link: 'Sources / publications'
+    literature:
+      title: Publications
+      perex: Selected fulltext articles and reports for further reading. Complete bibliographical records are available in the <a href="%{url}">Downloads</a> section as the List of publications.
+    nav_point: Navigační bod
+    filter_by_locality: "Site types filter:"
+    filter_by_era: "Chronological filter:"
+    legend: "Map notes:"
+    symbols: "Map symbols are available in the [Downloads](/en/ke-stazeni) section."
+  downloads:
+    perex: Maps and site plans are available in the folders of individual sites (tab Maps and plans). This section offers a list of bibliographic entries for further reading and several other files that can be useful while working with the Archaeological Atlas, planning your trips to archaeological sites and your navigation in the field with a GPS.
+
+  admin:
+    user:
+      sign_in_count: Počet přihlášení
+      last_sign_in_at: Poslední přihlášení
+
+  meta:
+    back_to_home: Back to home
+    error_404:
+      title: 404 error
+      text_line_1: The page you are looking for doesn't exist.
+      text_line_2: Either you have a bad link, or has been moved.
+    error_422:
+      title: 422 error
+      text_line_1: Change not allowed.
+      text_line_2: Maybe you want to do something that you are not allowed.
+    error_500:
+      title: 500 error
+      text_line_1: Sorry something went wrong.
+      text_line_2: Try to go to the homepage, or return later.
+
+  search:
+    title: Search results in sites
+    query: Search query
+    breadcrumb: Search
+    inlocations: Search in sites
+    sorry: We are sorry!
+    no_results: No results found.
+
+  # Kaminari
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "previous"
+      next: "next"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+
+  place_printer:
+    title: 'Archaelogical Atlas Of Bohemia – site'
+    page_numbers: 'page <page> of <total>'

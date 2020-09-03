@@ -1,0 +1,21 @@
+- if @places.size > 0
+  .row.locations
+    - for place in @places
+      .col-sm-6.indent-top
+        a.block.item.relative href=place_path(place.slug || place.id) data-show-on-map=true
+          .hidden-overflow.zooming
+            - thumbnail = place.cover_image.thumb("600x250#")
+            img.item-img.max-width-100 src=thumbnail.url width=thumbnail.width height=thumbnail.height alt="#{place.title}, #{place.subtitle}"
+            .item-text.absolute.fill.flex.top-left.vertical-gradient
+              .flex-bottom.fill-horizontal
+                .negative-block
+                  h4 = place.title
+                  p = place.subtitle
+  - if @pagination
+    .indent-top-condensed
+      = paginate @places, :theme => 'twitter-bootstrap-3'
+
+- else
+  .indent-top-triple.indent-bottom-triple.center
+    h1.green = t("search.sorry")
+    p.gray-text = t("search.no_results")

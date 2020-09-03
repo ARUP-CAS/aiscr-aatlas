@@ -1,0 +1,95 @@
+javascript:
+  showMarker = "#{@place.id}"
+
+.inner
+  .row
+    .col-sm-6
+      ol.breadcrumb
+        li
+          a href="/" = I18n.t('nav.introduction')
+        li
+          a href=places_path = I18n.t('nav.locations')
+        li.active= @place.title
+    .col-sm-6
+      .place-top-buttons
+        a.btn.btn-primary.btn-xs.pull-right href="#" data-marker=@place.id = I18n.t('show_on_map')
+
+        a.btn.btn-link.btn-xs.pull-right.pdf-link href=place_path(@place, format: :pdf)
+          = I18n.t('download_pdf')
+
+  .clearfix
+    h1.h2
+      span.upper= @place.title
+      ',
+      = @place.address
+
+    p.indent-top-half.bold= @place.subtitle
+    p.indent-top-half= @place.era
+
+// Tabs
+ul.nav.nav-tabs.nav-tabs-right.indent-top-half
+  li.active role="presentation"
+    a href="#description" data-toggle="tab" role="tab" = I18n.t('location.description_gallery')
+  li role="presentation"
+    a href="#plans" data-toggle="tab" role="tab" = I18n.t('location.map_plans')
+  - if @place.media_placements_documents.size > 0
+    li role="presentation"
+      a href="#literature" data-toggle="tab" role="tab" = I18n.t('location.literature.title')
+
+.inner
+  .tab-content
+    /! Description
+    .tab-pane.active role="tabpanel" id="description"
+      .indent-top data-gallery=true
+        - if mp = @place.media_placements_images.not_plans.first
+          /- first_media = @place.media_placements.first.media_item
+          - original =  mp.media_item.thumb("1200x")
+          a.thumbnail.photoswipe-item href=original.url data-caption=mp.title data-size="#{original.width}x#{original.height}"
+            img.max-width-100 src=original.url alt=mp.title
+          .indent-top-thin
+            p.caption.small= mp.title
+            p.small.gray-text= mp.media_item.copyright
+
+      .textile
+        = markdown @place.text_content
+      / p.small.indent-top
+      /   = "#{I18n.t('location.nav_point')}: #{@place.geo_coordinates}"
+
+      .gallery.row.indent-top data-gallery=true
+        - for media in @place.media_placements_images.not_plans.all
+          .col-sm-4.item.item
+            - thumbnail = media.media_item.thumb("500x500#")
+            - original = media.media_item.thumb("1200x1200")
+
+            a.thumbnail.photoswipe-item href=original.url data-caption=media.title data-size="#{original.width}x#{original.height}"
+              img.max-width-100 src=thumbnail.url alt=media.title
+              .indent-top-thin
+                .caption.small = truncate(media.title, length: 60)
+                .gray-text.small = media.media_item.copyright
+
+    /! Plans
+    .tab-pane role="tabpanel" id="plans"
+      .indent-top
+        = markdown "**#{t("location.legend")}** #{@place.map_text_content.strip unless @place.map_text_content.nil?} #{I18n.t("location.symbols")}"
+      .row.indent-top data-gallery=true
+        - for media in @place.media_placements_images.plans
+          .col-sm-4.item.inline-block
+            - thumbnail = media.media_item.thumb("500x500#")
+            - original = media.media_item.thumb("1200x1200")
+
+            a.thumbnail.photoswipe-item href=original.url data-caption=media.title data-size="#{original.width}x#{original.height}"
+              img.max-width-100 src=thumbnail.url
+              .indent-top-thin
+                .caption.small = truncate(media.title, length: 80)
+                .gray-text.small = media.media_item.copyright
+
+    /! Documents
+    .tab-pane role="tabpanel" id="literature"
+      .indent-top
+        p == I18n.t('location.literature.perex', url: downloads_path)
+
+        - for media in @place.media_placements_documents
+          a.block.middle.indent-top target="_blank" href=media.media_item.source_url
+            .ico-download.inline-block
+            span.indent-left-condensed = media.title
+  .indent-top

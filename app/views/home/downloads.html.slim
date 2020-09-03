@@ -1,0 +1,16 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('nav.downloads')
+
+  h1 = I18n.t('nav.downloads')
+  p.indent-top = I18n.t('downloads.perex')
+
+  .indent-top
+    - for item in @downloads
+      a.block.middle.indent-top target="_blank" href="/#{item['file']}"
+        .ico-download.inline-block
+        span.indent-left-condensed = item['title']
+
+  .clearfix.indent-top

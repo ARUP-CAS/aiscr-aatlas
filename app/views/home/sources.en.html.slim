@@ -1,0 +1,34 @@
+.inner
+  ol.breadcrumb
+    li
+      a href="/" = I18n.t('nav.introduction')
+    li.active = I18n.t('nav.sources')
+
+  .rich-text
+    h1 Sources
+
+    figure
+      .figure-images
+        = img_tag_retina_static('book_cover_AAC.jpg')
+
+      figcaption
+        h2 Kuna, M. et al., <b>Archeologický atlas Čech. Vybrané památky od pravěku do 20. století – Archaeological Atlas of Bohemia. Selected Sites from Prehistory to the 20th century</b>. Praha: Institute of Archaeology CAS – Academia 2014 (1st edition), 2015 (2nd edition). 517 pp. ISBN 978-80-87365-78-6 (ARÚP), 978-80-200-2485-5 (Academia).
+        p The book contains (i) a structured description of 105 archaeological sites on the territory of Bohemia, their maps and plans, photographs, coordinates for GPS and QR codes referring to this website (#{link_to 'example', '/downloads/ukazka_AAC.pdf', target: '_blank'}); (ii) an introduction and text boxes, where various approaches and methods of current archaeology are presented in a comprehensible way, and also (iii) explanations of special terms, an index of cadastral areas, site names and a list of used publications is given. The book can be acquired in Academia bookshops.
+
+    figure
+      .figure-images
+        = img_tag_retina_static('book_cover_MS.jpg')
+
+      figcaption
+        h2 Tomášek, M. et al., <b>100 zajímavých archeologických lokalit Moravy a Slezska – 100 Interesting Archaeological Sites of Moravia and Silesia</b>. Praha – Brno: National Heritage Institute 2015. ISBN 978-80-7480-054-2.
+        p This collection of 100 archaeological sites in Moravia and Silesia is presented similarly to the Archaeological Atlas of Bohemia (#{link_to 'example', '/downloads/ukazka_MS.pdf', target: '_blank'}). The book can be acquired in the bookshop of the National Heritage Institute (Na Perštýně 356/12, 110 00 Praha – Staré Město) and in some of the heritage sites administered by the Institute. Cf. #{link_to('https://www.npu.cz/100_zajimavych_archeologickych_lokalit_moravy_a_slezska', 'https://www.npu.cz/100_zajimavych_archeologickych_lokalit_moravy_a_slezska', target: '_blank', class: 'rich-text-break')}
+
+
+    figure
+      .figure-images
+        = img_tag_retina_static('logo_1_AIS_CR.png')
+        = img_tag_retina_static('logo_8_StrategieAV21.png')
+
+      figcaption
+        p <b>The Digital Corpus of Hillforts in Bohemia</b> collects information on prehistoric and early medieval hillforts available at the Institute of Archaeology of the CAS in Prague as part of the Archaeological Information System of the CR project. Currently, the list contains about 600 prehistoric and early medieval hillforts and hill-top settlements, a part of which is presented here. #{link_to 'J. Marounek', 'http://www.stredovek.com'} (National Heritage Institute, Central Bohemia) also takes part in the database development.
+        p The creation and development of the database is supported by the “Memory in the Digital Age” research programme, a part of the #{link_to 'Strategy AV21 of the CAS', 'http://av21.avcr.cz/'}. The data are also made available through the #{link_to 'Archaeological Map of the CR', 'http://www.archeologickamapa.cz/'} and the #{link_to 'Digital Archive of the AMCR', 'http://digiarchiv.amapa.cz/home'}, as well as in other ways.
